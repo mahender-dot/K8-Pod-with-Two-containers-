@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multicontainer
+  namespace: default
+spec:
+  containers:
+  - image: nginx
+    name: nginx-conatiner
+    ports:
+    - containerPort: 80  
+  - image: linuxserver/firefox:131.0.3
+    name: firefox-conatiner
+    ports:
+    - containerPort: 3000    
